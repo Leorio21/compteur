@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.body {
+  background: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  width: 100%;
+}
+
+.number__container {
+  position: relative;
+  padding-top: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 320px;
+  perspective: 1000px;
+}
+
+.frame {
+  position: relative;
+  border: 5px outset rgb(129, 128, 128);
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  background-color: black;
+}
+
+.frame__sup {
+  border-radius: 25px 25px 0px 0px;
+}
+
+.frame__inf {
+  border-radius: 0px 0px 25px 25px;
+}
+
+.animated__frame {
+  transform-origin: bottom;
+  transform-style: preserve-3d;
+}
+
+.num__sup__fixe {
+  position: absolute;
+}
+.animated__frame__sup {
+  padding-right: 1px;
+}
+
+.animated__frame__inf {
+  position: absolute;
+  padding-right: 1px;
+  left: 0;
+  rotate: x 180deg;
+  transform: translateZ(.1px);
+}
+
+.div__inf__fixe {
+  z-index: -1;
+
+}
+
+.number {
+  color: rgb(236, 236, 236);
+  font-size: 200px;
+}
+
+.number__sup {
+  position: absolute;
+  bottom: -115px;
+}
+
+.number__inf {
+  position: absolute;
+  top: -115px;
+}
+
+.rotation {
+  transform: rotateX(-180deg);
+  transition: all .8s ease-in-out;
+}
