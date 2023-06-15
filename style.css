@@ -51,13 +51,9 @@
 .num__sup__fixe {
   position: absolute;
 }
-.animated__frame__sup {
-  /* padding-right: 2px; */
-}
 
 .animated__frame__inf {
   position: absolute;
-  /* padding-right: 1px; */
   left: 0;
   rotate: x 180deg;
   transform: translateZ(.1px);
@@ -65,7 +61,6 @@
 
 .div__inf__fixe {
   z-index: -1;
-
 }
 
 .number {

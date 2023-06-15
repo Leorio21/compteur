@@ -35,8 +35,8 @@ class Number {
       const divSup = document.getElementById(`animated__frame__${this.name}`);
       divSup.classList.add("rotation");
       setTimeout(() => {
-        document.getElementById(`${this.name}PrevtSup`).textContent = this.value;
-        document.getElementById(`${this.name}PrevtInf`).textContent = this.value;
+        document.getElementById(`${this.name}CurrentSup`).textContent = this.value;
+        document.getElementById(`${this.name}CurrentInf`).textContent = this.value;
       }, 800)
       setTimeout(() => {
         divSup.classList.remove("rotation");
