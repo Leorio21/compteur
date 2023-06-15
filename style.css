@@ -52,12 +52,12 @@
   position: absolute;
 }
 .animated__frame__sup {
-  padding-right: 1px;
+  /* padding-right: 2px; */
 }
 
 .animated__frame__inf {
   position: absolute;
-  padding-right: 1px;
+  /* padding-right: 1px; */
   left: 0;
   rotate: x 180deg;
   transform: translateZ(.1px);
