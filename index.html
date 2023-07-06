@@ -7,31 +7,33 @@
   <title>Compteur</title>
 </head>
 <body class="body">
-  <div class="number__container">
-    <div class="frame num__sup__fixe frame__sup"><span id="centaineNextSup" class="number number__sup">1</span></div>
-    <div id="animated__frame__centaine" class="animated__frame">
-      <div class="frame animated__frame__inf frame__inf"><span id="centaineNextInf" class="number number__inf">1</span></div>
-      <div class="frame animated__frame__sup frame__sup"><span id="centaineCurrentSup" class="number number__sup">0</span></div>
+  <div class="counter_container">
+    <div class="number__container">
+      <div class="frame num__sup__fixe frame__sup"><span id="centaineNextSup" class="number number__sup">1</span></div>
+      <div id="animated__frame__centaine" class="animated__frame">
+        <div class="frame animated__frame__inf frame__inf"><span id="centaineNextInf" class="number number__inf">1</span></div>
+        <div class="frame animated__frame__sup frame__sup"><span id="centaineCurrentSup" class="number number__sup">0</span></div>
+      </div>
+      <div class="frame div__inf__fixe frame__inf"><span id="centaineCurrentInf" class="number number__inf">0</span></div>
     </div>
-    <div class="frame div__inf__fixe frame__inf"><span id="centaineCurrentInf" class="number number__inf">0</span></div>
-  </div>
-  <div class="number__container">
-    <div class="frame num__sup__fixe frame__sup"><span id="dizaineNextSup" class="number number__sup">1</span></div>
-    <div id="animated__frame__dizaine" class="animated__frame">
-      <div class="frame animated__frame__inf frame__inf"><span id="dizaineNextInf" class="number number__inf">1</span></div>
-      <div class="frame animated__frame__sup frame__sup"><span id="dizaineCurrentSup" class="number number__sup">0</span></div>
+    <div class="number__container">
+      <div class="frame num__sup__fixe frame__sup"><span id="dizaineNextSup" class="number number__sup">1</span></div>
+      <div id="animated__frame__dizaine" class="animated__frame">
+        <div class="frame animated__frame__inf frame__inf"><span id="dizaineNextInf" class="number number__inf">1</span></div>
+        <div class="frame animated__frame__sup frame__sup"><span id="dizaineCurrentSup" class="number number__sup">0</span></div>
+      </div>
+      <div class="frame div__inf__fixe frame__inf"><span id="dizaineCurrentInf" class="number number__inf">0</span></div>
     </div>
-    <div class="frame div__inf__fixe frame__inf"><span id="dizaineCurrentInf" class="number number__inf">0</span></div>
-  </div>
-  <div class="number__container">
-    <div class="frame num__sup__fixe frame__sup"><span id="uniteNextSup" class="number number__sup">1</span></div>
-    <div id="animated__frame__unite" class="animated__frame">
-      <div class="frame animated__frame__inf frame__inf"><span id="uniteNextInf" class="number number__inf">1</span></div>
-      <div class="frame animated__frame__sup frame__sup"><span id="uniteCurrentSup" class="number number__sup">0</span></div>
+    <div class="number__container">
+      <div class="frame num__sup__fixe frame__sup"><span id="uniteNextSup" class="number number__sup">1</span></div>
+      <div id="animated__frame__unite" class="animated__frame">
+        <div class="frame animated__frame__inf frame__inf"><span id="uniteNextInf" class="number number__inf">1</span></div>
+        <div class="frame animated__frame__sup frame__sup"><span id="uniteCurrentSup" class="number number__sup">0</span></div>
+      </div>
+      <div class="frame div__inf__fixe frame__inf"><span id="uniteCurrentInf" class="number number__inf">0</span></div>
     </div>
-    <div class="frame div__inf__fixe frame__inf"><span id="uniteCurrentInf" class="number number__inf">0</span></div>
   </div>
-  <button type="button" onclick=start()>Démarrer compteur</button>
+  <button id="startButton" type="button" onclick=start()>Démarrer/Reprendre</button>
   <script src="script.js"></script>
 </body>
 </html>

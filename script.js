@@ -1,26 +1,3 @@
-const start = () => {
-  let count = 0;
-  let centaine = new Number("centaine");
-  let dizaine = new Number("dizaine");
-  let unite = new Number("unite");
-
-  setInterval(() => {
-    count = (count + 1) % 1000;
-
-    const [newCentaine, newDizaine, newUnite] = parseCount(count);
-    
-    newUnite != unite.value && unite.rotate();
-    newDizaine != dizaine.value && dizaine.rotate();
-    newCentaine != centaine.value && centaine.rotate();
-}, 1000)
-
-}
-
-const parseCount = (count) => {
-  const parsingCount = count.toString().padStart(3, "0").split("");
-  return parsingCount;
-}
-
 class Number {
   constructor(name) {
     this.name = name;
@@ -41,4 +18,41 @@ class Number {
       document.getElementById(`${this.name}NextInf`).textContent = (this.value + 1) % 10;
     }, 900);
   }
+}
+
+
+let runCounter = false;
+let intervalRef = null
+let count = 0;
+let centaine = new Number("centaine");
+let dizaine = new Number("dizaine");
+let unite = new Number("unite");
+
+const start = () => {
+
+  const button = document.getElementById("startButton")
+  button.onclick = stop;
+  button.innerText = "Stop";
+
+  intervalRef = setInterval(() => {
+    count = (count + 1) % 1000;
+
+    const [newCentaine, newDizaine, newUnite] = parseCount(count);
+    
+    newUnite !== unite.value && unite.rotate();
+    newDizaine !== dizaine.value && dizaine.rotate();
+    newCentaine !== centaine.value && centaine.rotate();
+  }, 1000)
+}
+
+const stop = () => {
+  clearInterval(intervalRef);
+  const button = document.getElementById("startButton")
+  button.onclick = start;
+  button.innerText = "Démarrer/Reprendre";
+}
+
+const parseCount = (count) => {
+  const parsingCount = count.toString().padStart(3, "0").split("").map((el) => parseInt(el));
+  return parsingCount;
 }
