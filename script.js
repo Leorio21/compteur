@@ -22,7 +22,7 @@ class Number {
 
 
 let runCounter = false;
-let intervalRef = null
+let intervalRef = null;
 let count = 0;
 let centaine = new Number("centaine");
 let dizaine = new Number("dizaine");
@@ -30,9 +30,7 @@ let unite = new Number("unite");
 
 const start = () => {
 
-  const button = document.getElementById("startButton")
-  button.onclick = stop;
-  button.innerText = "Stop";
+  changeButton("Stop");
 
   intervalRef = setInterval(() => {
     count = (count + 1) % 1000;
@@ -47,9 +45,13 @@ const start = () => {
 
 const stop = () => {
   clearInterval(intervalRef);
+  changeButton("Reprendre");
+}
+
+const changeButton = (text) => {
   const button = document.getElementById("startButton")
-  button.onclick = start;
-  button.innerText = "Démarrer/Reprendre";
+  button.onclick = text === "Stop" ? stop : start;
+  button.innerText = text === "Stop" ? "Stop" : "Reprendre";
 }
 
 const parseCount = (count) => {
